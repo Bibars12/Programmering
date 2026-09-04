@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Intro</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+    
+    
+var player = {
+    x: 50,
+    y: 50,
+    size: 40,
+    color: "blue",
+    speedX: 1, // km/h // med 0, så blir bollen fallande. bollen har 1 riktining
+    speedY: 5 //  km/h // bollen rör sig upp! Endast Y-koordinaten
+};
+function update(){
+    clearScreen();
+    circle(player.x, player.y, player.size, player.color);
+    player.x = player.x + player.speedX;
+    player.y = player.y + player.speedY;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
