@@ -15,14 +15,50 @@ var player = {
     y: 50,
     size: 40,
     color: "blue",
-    speedX: 1, // km/h // med 0, så blir bollen fallande. bollen har 1 riktining
-    speedY: 5 //  km/h // bollen rör sig upp! Endast Y-koordinaten
+    speedX: 5, // km/h // med 0, så blir bollen fallande. bollen har 1 riktining
+    speedY: 0, //  km/h // bollen rör sig upp! Endast Y-koordinaten
+    directionX: 1,
+    directionY: -1 
 };
+
+var enemy = {
+    x: 100,
+    y: 100,
+    bredd: 50,
+    hojd: 50,
+    color: "red",
+    speedX:5,
+    speedY: 0,
+    directionX: 1,
+    directionY: -1 
+}
+
+
+
+
 function update(){
     clearScreen();
+    
     circle(player.x, player.y, player.size, player.color);
-    player.x = player.x + player.speedX;
-    player.y = player.y + player.speedY;
+    
+    player.x = player.x + player.speedX * player. directionX
+    player.y = player.y + player.speedY * player. directionY
+
+    rectangle(enemy.x, enemy.y, enemy.bredd, enemy.hojd, enemy.color)
+
+    // enemy.x = enemy.x + enemy.speedX * enemy. directionX
+
+    setTimeout(() => {
+        enemy.x = enemy.x + mouse.x / 100 
+    }, 1000)
+
+
+
+    enemy.y = enemy.y + enemy.speedY * enemy. directionY
+
+
+
+    console.log(player.x)
 }
 
 
