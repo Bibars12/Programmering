@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Intro</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+    
+     
+    var age = 14
+    if(age => 15){
+      console.log("du får köpa energidryck")
+    } else{
+       console.log("du får inte köpa")
+    }
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    var player = {
+    x:50,
+    y:200,
+    size:40,
+    color: "blue",
+    speedX: 10,
+    direction:1
+   };
+   
+  var x = 0
+  var bounce = 3 
+   function update() {
+    clearScreen()
+    
+    picture(x, 0, "http://shorturl.at/9F9lR", totalWidth * 2, totalHeight)
+    x--
+    circle(player.x, player.y, player.size, player.color)
+    
+    player.x = player.x + player.speedX * player.direction;
+     
+    text(50,50,40, "antal studs kvar: " + bounce, "white")
+
+    // om spelaren når höger kanr, så sätts färdrikting till -1
+    if(player.x + player.size > totalWidth){
+
+      player.direction = -1
+      player.color = "green"
+      player.y = player.y + 20
+      bounce--
+
+    }
+    
+    // Om spelaren når vänster kant, sätt färdrikting till 1
+    if(player.x - player.size < 0){
+      player.direction = 1
+      player.color = "red"
+      player.x = random(0, totalWidth)
+      bounce--
+
+      
+
+    }
+     if(bounce <= 0) {
+       picture(player.x - player.size * 1.5, player.y - player.size * 1.5, "https://www.textures4photoshop.com/tex/thumbs/explosion-effect-PNG-image-thumb26.png", player.size * 3, player.size * 3 )
+     } 
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  </script>
+</body>
+</html>
