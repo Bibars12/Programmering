@@ -67,6 +67,7 @@ function update() {
     player.liv = player.liv - 1 
     zombie1.x = random(totalWidth)
     zombie1.y = random(totalHeight)
+   
     if( distance(player, zombie1) < 65 ) {
         zombie1.x = random(totalWidth)
         zombie1.y = random(totalHeight)
